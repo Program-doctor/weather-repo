@@ -1,0 +1,105 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+         @import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+        body{
+            text-align: center;
+        }
+        .cloud{
+            display: block;
+            margin: 1.1em auto;
+            font-size: 2rem;
+        }
+        .tokyo{
+            line-height: 10px;
+            font-family: 'Roboto', sans-serif;
+        }
+        .tokyo h1{
+            color: #0000f8;
+            opacity: .755;
+        }
+        .tokyo p{
+            font-size: 2rem;
+        }
+        .tommorow{
+            margin: 50px auto;
+        }
+        .tommorow strong{
+            font-size:large;
+        }
+        .tommorow p{
+           font-family: 'Courier Prime', monospace;
+        }
+        
+        .cast-emoji{font-size: 1.2rem;}
+        button{
+            padding: 21px 25px;
+            background-color: #0000f8;
+            opacity: .855;
+            color: #fff;
+            border-radius: 30px;
+            font-family: 'Roboto', sans-serif;
+            /* box-shadow:1px 1px black; */
+            transition: all 1s linear;
+            box-shadow:rgba(37, 39, 89, 0.505) 0 5px 5px 0;
+            font-size: 1rem;
+        }
+       
+        .footer{
+            font-family: 'Inconsolata', monospace;
+            opacity: 0.675;
+        }
+        .tommorow:hover{
+            opacity: 1;
+            background: rgba(252, 252, 174, 0.3);
+            width: 350px;
+            border-radius: 10px;
+            padding: 15px 0;
+            transition: all 120ms ease-in-out;
+        }
+        button:hover{
+            cursor: pointer;
+            background-color: rgb(156, 22, 51);
+        }
+    </style>
+</head>
+<body>
+    <div class="tokyo">
+        <span class="cloud">🌤️</span>
+        <h1>Currently 21&deg; in Tokyo</h1>
+        <p>13&deg; / <strong>23&deg;</strong></p>
+    </div>
+    <div class="forecast">
+        <div class="tommorow">
+                <span class="cast-emoji">🌧️
+                    <strong>Tommorow</strong>
+                </span>
+                <p>10&deg; / <strong>22&deg;</strong></p>
+        </div>
+        <div class="tommorow">
+            <span class="cast-emoji">🌥️
+                <strong>Saturday</strong>
+            </span>
+            <p>15&deg;  /  <strong>17&deg;</strong></p>
+        </div>
+        <div class="tommorow">
+            <span class="cast-emoji">☀️
+                <strong>Sunday</strong>
+            </span>
+            <p>25&deg; / <strong>28&deg;</strong></p>
+        </div>
+    </div>
+    <button type="submit">Change city</button>
+    <div class="footer">
+        <p>Coded by Promise Sylvester</p>
+    </div>
+</body>
+</html>
