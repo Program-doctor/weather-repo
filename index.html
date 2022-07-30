@@ -105,5 +105,27 @@
     <div class="footer">
         <p>Coded by Promise Sylvester</p>
     </div>
+    <script>
+        function updateHeadin(newHeadin){
+            let headin = document.querySelector(".help");
+            headin.innerHTML = newHeadin;
+        }
+
+        function cityApplied() {
+            let name=prompt("What is your name?");            let changeCity=prompt("What is the name of the city you live in?");
+            let emoji=document.querySelector(".cloud");
+            let deg=prompt("What is the temperature of your city?");
+            if (deg>=0) {
+                updateHeadin(`Welcome, ${name}! Currently  ${deg}&deg;C in ${changeCity}`);
+                emoji.innerHTML="😀";
+            }
+            else{
+                updateHeadin(`Sorry ${name}, Currently ${deg}&deg;C in ${changeCity} `);
+                emoji.innerHTML="😧"
+            }
+        }
+        let applyButton=document.querySelector("button");
+        applyButton.addEventListener("click", cityApplied);
+    </script>
 </body>
 </html>
