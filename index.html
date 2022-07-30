@@ -21,6 +21,7 @@
         .tokyo{
             line-height: 10px;
             font-family: 'Roboto', sans-serif;
+
         }
         .tokyo h1{
             color: #0000f8;
@@ -34,16 +35,16 @@
         }
         .tommorow{
             margin: 30px auto;
-            width: fit-content;
+            /* width: fit-content; */
             padding: auto; 
             transition: all 100ms ease-in-out;
             border: 1px solid transparent;
             padding: 15px 0; 
+            max-width: 350px;
         }
         .tommorow:hover{
             background: rgba(252, 252, 174, 0.3); 
             border-radius: 5px;
-            width: 350px;
         }
         .tommorow strong{
             font-size:large;
@@ -78,7 +79,7 @@
 <body>
     <div class="tokyo">
         <span class="cloud">🌤️</span>
-        <h1>Currently 21&deg; in Tokyo</h1>
+        <h1 class="help">Currently 21&deg; in Tokyo</h1>
         <p>13&deg; / <strong>23&deg;</strong></p>
     </div>
     <div class="forecast">
@@ -112,8 +113,7 @@
         }
 
         function cityApplied() {
-            let name=prompt("What is your name?");           
-            let changeCity=prompt("What is the name of the city you live in?");
+            let name=prompt("What is your name?");            let changeCity=prompt("What is the name of the city you live in?");
             let emoji=document.querySelector(".cloud");
             let deg=prompt("What is the temperature of your city?");
             if (deg>=0) {
